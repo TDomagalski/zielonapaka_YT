@@ -18,7 +18,7 @@ export default function PlusIcon() {
     >
       <path
         d="M12 5V19M5 12H19"
-        strokeWidth="2"
+        strokeWidth="2.4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
