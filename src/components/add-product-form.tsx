@@ -1,8 +1,12 @@
 import AddProdutButton from './buttons/add-produt-button';
+import { addProductAction } from '@/actions/admin-actions';
 
 export default function AddProductForm() {
   return (
-    <form className="rounded-lg mx-auto border border-gray-200 p-8 shadow-lg shadow-gray-200/50">
+    <form
+      className="rounded-lg mx-auto border border-gray-200 p-8 shadow-lg shadow-gray-200/50"
+      action={addProductAction}
+    >
       <div className="flex flex-col gap-1 mb-4">
         <label className="text-gray-950 font-medium text-sm" htmlFor="name">
           Nazwa
