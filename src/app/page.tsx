@@ -1,7 +1,10 @@
-import Link from "next/link";
-import ProductsSection from "@/components/products-section";
+import Link from 'next/link';
+import ProductsSection from '@/components/products-section';
+import { getProducts } from '@/lib/server-utils';
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts();
+
   return (
     <main>
       <section className="bg-[url(/hero-1.png)] bg-cover bg-center py-16 lg:py-32 mb-16 lg:mb-32 text-center lg:text-left">
@@ -21,7 +24,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <ProductsSection />
+      <ProductsSection products={products} />
     </main>
   );
 }
