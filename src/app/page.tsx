@@ -6,7 +6,7 @@ export default async function Home() {
   const products = await getProducts();
 
   return (
-    <main>
+    <>
       <section className="bg-[url(/hero-1.png)] bg-cover bg-center py-16 lg:py-32 mb-16 lg:mb-32 text-center lg:text-left">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-8">
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-8">
@@ -25,6 +25,6 @@ export default async function Home() {
         </div>
       </section>
       <ProductsSection products={products} />
-    </main>
+    </>
   );
 }
