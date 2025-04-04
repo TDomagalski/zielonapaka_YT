@@ -36,7 +36,10 @@ export default function ProductsSection({
   const sortedProducts = sortProducts(products, sortBy);
 
   return (
-    <section className="max-w-screen-2xl mx-auto px-4 sm:px-8 mb-16 lg:mb-32">
+    <section
+      id="products"
+      className="max-w-screen-2xl mx-auto px-4 sm:px-8 mb-16 lg:mb-32"
+    >
       {/* Jest taka zasada że jak piszemy element section to zawsze pod nim musi się znaleść nagłówek. h1 może być użyty tylko raz na stronie więc trzeba użyć h2 */}
       <h2 className="text-4xl font-medium tracking-tight text-gray-950 mb-8">
         Świeżo, tanio i ekologicznie
