@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import LogoIcon from "./icons/logoIcon";
-import BagIcon from "./icons/bagIcon";
-import UserIcon from "./icons/userIcon";
+import LogoIcon from './icons/logoIcon';
+import BagIcon from './icons/bagIcon';
+import UserIcon from './icons/userIcon';
 
 export default function Nav() {
   return (
@@ -23,7 +23,7 @@ export default function Nav() {
           <li>
             <Link
               className="block group p-2 rounded-lg hover:bg-green-100 transition-all duration-300 relative"
-              href="/cart"
+              href="/login"
             >
               <UserIcon />
             </Link>
