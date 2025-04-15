@@ -1,7 +1,7 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import AddProdutButton from './buttons/add-produt-button';
+import AddProdutButton from '../buttons/add-produt-button';
 import { addProductAction } from '@/actions/admin-actions';
 import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
