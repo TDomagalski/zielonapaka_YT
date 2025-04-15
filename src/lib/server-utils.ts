@@ -5,9 +5,9 @@ import prisma from './prisma';
 import { type TProduct } from './types';
 import { NextRequest } from 'next/server';
 
-export async function getProductByName(name: string) {
+export async function getProductByName(productName: string) {
   return await prisma.product.findFirst({
-    where: { name },
+    where: { name: productName },
   });
 }
 
@@ -48,4 +48,11 @@ export function checkAuthorization(req: NextRequest) {
     username === process.env.ADMIN_USERNAME &&
     password === process.env.ADMIN_PASSWORD
   );
+}
+
+// Funkcja getProductByID zwraca produkt o podanym id. Funkcja ta jest wykorzystywana w komponentach, które wyświetlają szczegóły produktu.
+export async function getProductByID(productID: string) {
+  return await prisma.product.findUnique({
+    where: { id: productID },
+  });
 }
